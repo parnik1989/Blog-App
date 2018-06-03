@@ -1,0 +1,23 @@
+{
+      "dataList":[{
+        "title": "Author's colourful life",
+        "image": "colour"
+      },
+      {
+        "title": "Author's Lovely Flowers",
+        "image": "flowers"
+      },
+      {
+        "title": "Author's Love of your life",
+        "image": "love"
+      },
+      {
+        "title": "Author's abstract Objects",
+        "image": "pattern"
+      },
+      {
+        "title": "Author's cozy winters",
+        "image": "winter"
+      }
+      ]
+}

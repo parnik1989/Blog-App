@@ -1,0 +1,62 @@
+<div class="row mainContent">
+    <div class="col-sm-12 smallHeader">
+        <div class="row smallheaderrow">
+            <div class=" col-sm-9 subjectDiv">
+                <span>
+                    <h1><a href="/popular">Most Popular</a></h1>
+                </span>
+            </div>
+            <div class=" col-sm-3 viewAll">
+                <span>
+                    <p><a href="/popular">View All</a></p>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3" *ngFor="let item of popularItems| slice:0:4; let i=index">
+                <a href="/home/storypage" (click)="populateStoryDetails(item.name)"><img src="assets/BlogImages/mostPopular/{{item.image}}.jpg" alt="photos" class="image">
+              <div class="bottomtext">{{item.title}}</div></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 smallHeader">
+        <div class="row smallheaderrow">
+            <div class=" col-sm-9 subjectDiv">
+                <span>
+                    <h1><a href="/recent">Recently Added</a></h1>
+                </span>
+            </div>
+            <div class=" col-sm-3 viewAll">
+                <span>
+                    <p><a href="/recent">View All</a></p>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3" *ngFor="let item of recentItems | slice:0:4; let i=index">
+              <img src="assets/BlogImages/recentlyAdded/{{item.image}}.jpg" alt="Eiffel tower" class="image">
+              <div class="bottomtext">{{item.title}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 smallHeader">
+        <div class="row smallheaderrow">
+            <div class=" col-sm-9 subjectDiv">
+                <span>
+                    <h1><a href="/authors">Author's Favorite</a></h1>
+                </span>
+            </div>
+            <div class=" col-sm-3 viewAll">
+                <span>
+                    <p><a href="/authors">View All</a></p>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3" *ngFor="let item of authorsItem| slice:0:4; let i=index">
+                <img src="assets/BlogImages/bloggerchoice/{{item.image}}.jpg" alt="Eiffel tower" class="image">
+              <div class="bottomtext">{{item.title}}</div>
+            </div>
+        </div>
+    </div>
+</div>

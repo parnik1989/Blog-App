@@ -1,0 +1,11 @@
+.header {
+    width: 100%;
+    min-height: 100%;
+    background-color: #39777c;
+    margin-left: 0%;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+.searchDiv{
+    max-width: 85%;
+}

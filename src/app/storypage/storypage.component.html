@@ -1,0 +1,7 @@
+<div class="row story-background">
+    <div class=" col-sm-12 smallHeader"></div>
+    <div *ngFor="let story of storyDetails">
+      <p class="story-text">{{story.text}}</p>
+      <img src="assets/BlogImages/{{storyName}}/{{story.image}}.JPG" alt="Eiffel tower" class="image">
+    </div>
+  </div>

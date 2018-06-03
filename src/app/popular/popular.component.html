@@ -1,0 +1,17 @@
+<div class="row mainContent">
+  <div class="col-sm-12 smallHeader">
+      <div class="row smallheaderrow">
+          <div class=" col-sm-12 subjectDiv">
+              <span>
+                  <h1>Most Popular</h1>
+              </span>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3" *ngFor="let item of popularItems">
+              <img src="assets/mostPopular/{{item.image}}.jpg" alt="Eiffel tower" class="image">
+              <div class="bottomtext">{{item.title}}</div>
+          </div>
+      </div>
+  </div>
+</div>

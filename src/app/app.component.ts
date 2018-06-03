@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  show: any = false;
+  name: any = 'Parnik';
+
+  public openLink() {
+    console.log('opened Data');
+  }
+
+
 }

@@ -1,0 +1,17 @@
+<div class="row mainContent">
+  <div class="col-sm-12 smallHeader">
+      <div class="row smallheaderrow">
+          <div class=" col-sm-12 subjectDiv">
+              <span>
+                  <h1>Author's Choice</h1>
+              </span>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3" *ngFor="let item of dataList">
+              <img src="assets/images/title.jpg" alt="image" class="image">
+              <div class="bottomtext">{{item.title}}</div>
+          </div>
+      </div>
+  </div>
+</div>
