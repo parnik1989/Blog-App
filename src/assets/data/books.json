@@ -15,8 +15,9 @@
         "image": "rech_bach"
       },
       {
-        "title": "The abstract Objects",
-        "image": "pattern"
+        "title": "Quotes By Richard Bach",
+        "name": "rech_bach",
+        "image": "rech_bach"
       }
       ]
 }
