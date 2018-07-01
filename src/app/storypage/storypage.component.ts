@@ -13,6 +13,7 @@ export class StorypageComponent implements OnInit {
     public storyName: string;
     public storyTitle: string;
     public storyDesc: string;
+    public blank: any = '';
 
     constructor() { }
 

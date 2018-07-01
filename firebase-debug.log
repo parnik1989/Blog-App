@@ -1,0 +1,35 @@
+[debug] [2018-07-01T13:31:30.571Z] ----------------------------------------------------------------------
+[debug] [2018-07-01T13:31:30.571Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\parni\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-07-01T13:31:30.571Z] CLI Version:   3.18.5
+[debug] [2018-07-01T13:31:30.571Z] Platform:      win32
+[debug] [2018-07-01T13:31:30.571Z] Node Version:  v8.9.1
+[debug] [2018-07-01T13:31:30.587Z] Time:          Sun Jul 01 2018 19:01:30 GMT+0530 (India Standard Time)
+[debug] [2018-07-01T13:31:30.587Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-01T13:31:30.633Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-01T13:31:30.633Z] > authorizing via signed-in user
+[debug] [2018-07-01T13:31:30.633Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-01T13:31:30.633Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/CMs6BG3r_3ESiaQXRfcH7rh0pxPi0TM2ekaMSW61tbA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jul 01 2018 19:01:30 GMT+0530 (India Standard Time)
+[debug] [2018-07-01T13:31:31.034Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-01T13:31:31.084Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ordo-ab-chaos  
+  
+ Sun Jul 01 2018 19:01:31 GMT+0530 (India Standard Time)
+[debug] [2018-07-01T13:31:32.492Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-01T13:31:32.494Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ordo-ab-chaos/tokens  
+  
+ Sun Jul 01 2018 19:01:32 GMT+0530 (India Standard Time)
+[debug] [2018-07-01T13:31:33.775Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ordo-ab-chaos'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-07-01T13:31:36.292Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/ordo-ab-chaos/uploads/-LGL1eJRH3uyPl06JtIj?fileCount=80&message=  
+  
+ Sun Jul 01 2018 19:01:36 GMT+0530 (India Standard Time)
