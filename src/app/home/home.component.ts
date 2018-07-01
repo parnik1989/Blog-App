@@ -2,33 +2,36 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
-import {DataListDTO} from '../support/application.dtos';
-import {StorypageComponent} from './../storypage/storypage.component';
+import {DataListDTO, ResponseDTO, StoryResponseDTO, StoryDTO, StroyPageInput} from '../support/application.dtos';
+import {RestServices} from '../service/rest.services';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
 
-  public popularItems: DataListDTO[] = [];
-  public recentItems: DataListDTO[] = [];
-  public authorsItem: DataListDTO[] = [];
-  public storyDetails: any[] = [];
-  public storyName: any = '';
-
-  constructor(private _httpService: HttpClient) {
+  public trendingList: DataListDTO[] = [];
+  public recentList: DataListDTO[] = [];
+  public authorsList: DataListDTO[] = [];
+  public storyPage: boolean;
+  public storyPageInput: StroyPageInput;
+  constructor(private _httpService: HttpClient,
+    private _restServices: RestServices) {
   }
 
   ngOnInit() {
+    this.storyPage = false;
     this.getMostPopularBlogs();
     this.getRecentBlogs();
     this.getAuthorsList();
+    this.storyPageInput = new StroyPageInput();
   }
   public getMostPopularBlogs (): void {
-    this._httpService.get('./assets/data/mostPopularList.json').subscribe(
+
+    this._httpService.get<ResponseDTO>('./assets/data/trending.json').subscribe(
       successResponse => {
-        this.popularItems = successResponse.dataList;
+        this.trendingList = successResponse.dataList;
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
@@ -36,9 +39,9 @@ export class HomeComponent implements OnInit {
     );
   }
   public getRecentBlogs (): void {
-    this._httpService.get('./assets/data/recentList.json').subscribe(
+    this._httpService.get<ResponseDTO>('./assets/data/recent.json').subscribe(
       successResponse => {
-        this.recentItems = successResponse.dataList;
+        this.recentList = successResponse.dataList;
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
@@ -46,9 +49,9 @@ export class HomeComponent implements OnInit {
     );
   }
   public getAuthorsList (): void {
-    this._httpService.get('./assets/data/authorsList.json').subscribe(
+    this._httpService.get<ResponseDTO>('./assets/data/authors.json').subscribe(
       successResponse => {
-        this.authorsItem = successResponse.dataList;
+        this.authorsList = successResponse.dataList;
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
@@ -56,19 +59,19 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  public populateStoryDetails(storyName: string): void {
-    console.log('Home page story populate' + storyName);
-    this.storyName = storyName;
-    this._httpService.get('./assets/BlogContents/' + storyName + '.json').subscribe(
+  public populateStoryDetails(storyName: string, storyTitle: string): void {
+    this._httpService.get<StoryResponseDTO>('./assets/BlogContents/' + storyName + '.json').subscribe(
       successResponse => {
-        this.storyDetails = successResponse.dataList;
+        this.storyPageInput.storyDTO = successResponse['storyDetails'];
+        this.storyPageInput.storyName = storyName;
+        this.storyPageInput.storyTitle = storyTitle;
+        this.storyPageInput.storyDesc = successResponse['storyDesc'];
+        this.storyPage = true;
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
       }
     );
-    console.log(this.storypage.storyName);
-    console.log(this.storypage.storyDetails);
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
+import {DataListDTO, ResponseDTO, StoryResponseDTO, StoryDTO, StroyPageInput} from '../support/application.dtos';
 @Component({
   selector: 'app-travel',
   templateUrl: './travel.component.html',
@@ -9,18 +10,36 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class TravelComponent implements OnInit {
 
-  public popularItems: object[] = [];
+  public mainDataList: DataListDTO[] = [];
+  public storyPageInput: StroyPageInput;
+  public storyPage: boolean;
 
   constructor(private _httpService: HttpClient) {
   }
 
   ngOnInit() {
-    this.getMostPopularBlogs();
+    this.getDataList();
+    this.storyPageInput = new StroyPageInput();
   }
-  public getMostPopularBlogs (): void {
-    this._httpService.get('./assets/data/mostPopularList.json').subscribe(
+  public getDataList (): void {
+    this._httpService.get<ResponseDTO>('./assets/data/travel.json').subscribe(
       successResponse => {
-        this.popularItems = successResponse.dataList;
+        this.mainDataList = successResponse.dataList;
+      },
+      (err: HttpErrorResponse) => {
+        console.log (err.message);
+      }
+    );
+  }
+
+  public populateStoryDetails(storyName: string, storyTitle: string): void {
+    this._httpService.get<StoryResponseDTO>('./assets/BlogContents/' + storyName + '.json').subscribe(
+      successResponse => {
+        this.storyPageInput.storyDTO = successResponse['storyDetails'];
+        this.storyPageInput.storyName = storyName;
+        this.storyPageInput.storyTitle = storyTitle;
+        this.storyPageInput.storyDesc = successResponse['storyDesc'];
+        this.storyPage = true;
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);

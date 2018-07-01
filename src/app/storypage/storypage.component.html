@@ -1,7 +1,7 @@
 <div class="row story-background">
-    <div class=" col-sm-12 smallHeader"></div>
-    <div *ngFor="let story of storyDetails">
-      <p class="story-text">{{story.text}}</p>
-      <img src="assets/BlogImages/{{storyName}}/{{story.image}}.JPG" alt="Eiffel tower" class="image">
-    </div>
+  <div class=" col-sm-12 story-title"><h3>{{storyTitle}}</h3></div>
+  <p class="story-text" *ngIf="storyDesc !== ''">{{storyDesc}}</p>
+  <div *ngFor="let story of storyDetails">
+    <img src="assets/BlogImages/{{storyName}}/{{story.image}}.JPG" alt="Eiffel tower" class="story-image">
   </div>
+</div>

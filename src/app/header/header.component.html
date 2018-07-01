@@ -1,6 +1,6 @@
-<div class="row header">
-  <p><img src="assets/images/menu_icon.png" class="rounded-circle" alt="menu" width="45" height="40" (click)="openSideNav()"></p>
-  <div class="col-sm-8 searchDiv">
-    <input class="form-control" id="myInput" type="text" placeholder="Search..">
-  </div>
+<div class ="header">
+  <span><i class="material-icons menu-img" *ngIf="!open" (click)="openSideNav()">menu</i></span>
+  <span><i class="material-icons menu-img" *ngIf="open" (click)="openSideNav()">close</i></span>
+  <span class="searchBox"><input class="form-control" id="myInput" type="text" placeholder="Search.."></span>
+  <a href="/home"><span class="home-icon"><i class="material-icons">home</i></span></a>
 </div>

@@ -1,17 +1,14 @@
-<div class="row mainContent">
-  <div class="col-sm-12 smallHeader">
-      <div class="row smallheaderrow">
-          <div class=" col-sm-12 subjectDiv">
-              <span>
-                  <h1>Most Popular</h1>
-              </span>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-sm-3" *ngFor="let item of items">
-              <img src="assets/images/title.jpg" alt="Eiffel tower" class="image">
-              <div class="bottomtext">First Blog Post jkhdjksf hjkdsfhkjd sfkdshf kjds</div>
-          </div>
-      </div>
-  </div>
+<div class="page-content" *ngIf="!storyPage">
+    <div class="topic-heading">
+        <span class="topic-name">Travel Stories</span>
+    </div>    
+    <div class="row image-row">
+        <div class="col-sm-3 content-row" *ngFor="let item of mainDataList">
+            <a (click)="populateStoryDetails(item.name,item.title)"><img src="assets/BlogImages/travel/{{item.image}}.JPG" alt="image" class="imageList">
+            <div class="bottomtext">{{item.title}}</div></a>
+        </div>
+    </div>
+</div>
+<div *ngIf="storyPage">
+    <app-storypage [storyPageInput] = "storyPageInput"></app-storypage>
 </div>

@@ -9,7 +9,6 @@ import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { TravelComponent } from './travel/travel.component';
 import { FoodComponent } from './food/food.component';
 import { BooksComponent } from './books/books.component';
-import { FestivalsComponent } from './festivals/festivals.component';
 import { RecentComponent } from './recent/recent.component';
 import { PopularComponent } from './popular/popular.component';
 import { AuthorComponent } from './author/author.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
   { path: 'travel' , component: TravelComponent},
   { path: 'food' , component: FoodComponent},
   { path: 'books' , component: BooksComponent},
-  { path: 'festivals' , component: FestivalsComponent},
   { path: 'recent' , component: RecentComponent},
   { path: 'popular' , component: PopularComponent},
   { path: 'authors' , component: AuthorComponent},

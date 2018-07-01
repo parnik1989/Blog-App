@@ -6,8 +6,8 @@
       },
       {
         "title": "Quotes By Paulo Cohelo",
-        "name": "quotes_paulo",
-        "image": "quotes_paulo"
+        "name": "pc",
+        "image": "pc"
       },
       {
         "title": "Quotes By Richard Bach",
@@ -15,8 +15,9 @@
         "image": "rech_bach"
       },
       {
-        "title": "The abstract Objects",
-        "image": "pattern"
+        "title": "Quotes By Richard Bach",
+        "name": "rech_bach",
+        "image": "rech_bach"
       }
       ]
 }

@@ -1,8 +1,66 @@
 .story-text {
-    padding: 4%;
-    margin: 0%;
+    padding: 3% 20%;
+    text-align: justify;
 }
 .story-background {
-    margin: 1%;
-    background-color: cadetblue;
+    width: 101%;
+    position: absolute;
+    margin-top: 250px;
+    background-color: rgb(181, 206, 207);
+}
+.story-image{
+    margin-left: 34%;
+    margin-bottom: 30px;
+    height: 374px;
+}
+.story-title {
+    background-color: lightsteelblue;
+    padding: 3% 20%;
+    font-size: 15px;
+}
+
+@media screen and (min-width:300px) and (max-width:599px){
+    .story-text {
+    padding: 3% 10%;
+    text-align: justify;
+    }
+    .story-background {
+    width: 104%;
+    position: absolute;
+    margin-top: 480px;
+    background-color: rgb(181, 206, 207);
+    }
+    .story-image{
+        height: 170px;
+        margin-bottom: 30px;
+        margin-left: 50px;
+    }
+    .story-title {
+        background-color: lightsteelblue;
+        padding: 3% 10%;
+    }
+
+}
+
+@media screen and (min-width:600px) and (max-width:850px){
+    .story-text {
+        padding: 3% 20%;
+        text-align: justify;
+    }
+    .story-background {
+        width: 103%;
+
+        position: absolute;
+        margin-top: 300px;
+        background-color: rgb(181, 206, 207);
+    }
+    .story-image{
+        height: 235px;
+        padding-left: 0%;
+    }
+    .story-title {
+        background-color: lightsteelblue;
+        padding: 1% 25%;
+    }
+
 }

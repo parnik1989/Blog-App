@@ -13,7 +13,6 @@ import { StorypageComponent } from './storypage/storypage.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { FoodComponent } from './food/food.component';
-import { FestivalsComponent } from './festivals/festivals.component';
 import { TravelComponent } from './travel/travel.component';
 import { BooksComponent } from './books/books.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
@@ -36,7 +35,6 @@ import { HttpClientModule } from '@angular/common/http';
     StorypageComponent,
     LifestyleComponent,
     FoodComponent,
-    FestivalsComponent,
     TravelComponent,
     BooksComponent,
     DisclaimerComponent,

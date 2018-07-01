@@ -6,13 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  show: any = false;
-  name: any = 'Parnik';
-
-  public openLink() {
-    console.log('opened Data');
-  }
-
-
 }

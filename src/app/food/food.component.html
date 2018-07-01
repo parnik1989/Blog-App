@@ -1,3 +1,14 @@
-<p>
-  food works!
-</p>
+<div class="page-content" *ngIf="!storyPage">
+    <div class="topic-heading">
+        <span class="topic-name">Food</span>
+    </div>    
+    <div class="row image-row">
+        <div class="col-sm-3 content-row" *ngFor="let item of mainDataList">
+            <a (click)="populateStoryDetails(item.name,item.title)"><img src="assets/BlogImages/food/{{item.image}}.JPG" alt="image" class="imageList">
+            <div class="bottomtext">{{item.title}}</div></a>
+        </div>
+    </div>
+</div>
+<div *ngIf="storyPage">
+    <app-storypage [storyPageInput] = "storyPageInput"></app-storypage>
+</div>
