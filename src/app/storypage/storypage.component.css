@@ -1,6 +1,7 @@
 .story-text {
     padding: 3% 20%;
     text-align: justify;
+    font-family: cursive;
 }
 .story-background {
     width: 101%;
@@ -9,7 +10,7 @@
     background-color: rgb(181, 206, 207);
 }
 .story-image{
-    margin-left: 40%;
+    margin-left: 75%;
     margin-bottom: 30px;
     height: 374px;
 }
