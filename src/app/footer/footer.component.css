@@ -1,23 +1,13 @@
 .footer{
     background-color: #39777c;
-    position: absolute;
+    position: relative;
     width: 100%;
-    margin-top: 1200px;
-    padding: 25px
+    padding: 25px;
+    bottom:0;
+    height: 300px;
   }
 
   .footer-details {
     font-size: 12px;
     text-align: justify;
   }
-
-  @media screen and (min-width:300px) and (max-width:599px){
-    .footer{
-      margin-top: 3100px;
-    }
-    }
-  @media screen and (min-width:600px) and (max-width:850px){
-  .footer{
-    margin-top: 900px;
-  }
-}

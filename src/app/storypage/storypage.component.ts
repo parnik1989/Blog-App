@@ -22,6 +22,7 @@ export class StorypageComponent implements OnInit {
         this.storyTitle = this.storyPageInput.storyTitle;
         this.storyName = this.storyPageInput.storyName;
         this.storyDesc = this.storyPageInput.storyDesc;
+
     }
 
 }

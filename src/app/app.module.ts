@@ -23,6 +23,7 @@ import { RecentComponent } from './recent/recent.component';
 import { AuthorComponent } from './author/author.component';
 import {RestServices} from './service/rest.services';
 import { HttpClientModule } from '@angular/common/http';
+import { BookSubscriptionComponent } from './book-subscription/book-subscription.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactusComponent,
     PopularComponent,
     RecentComponent,
-    AuthorComponent
+    AuthorComponent,
+    BookSubscriptionComponent
   ],
   imports: [
     BrowserModule,
