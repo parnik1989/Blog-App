@@ -22,7 +22,8 @@
 }
 .home-icon {
     margin-left: 90%;
-    color: white;
+    color: black;
+    font-size: 40px;
 }
 @media screen and (min-width:600px) and (max-width:850px){
     .searchBox{
@@ -33,8 +34,11 @@
     .home-icon {
         margin-left: 80%;
     }
+    .header {
+        padding : 0px 25px 50px 25px;
+    }
 }
-@media screen and (min-width:300px) and (max-width:599px){
+@media screen and (min-width:375px) and (max-width:599px){
     .searchBox{
         width: 50%;
         margin-top: 3px;
@@ -45,6 +49,24 @@
         margin-left: 75%;
     }
     .header {
-        padding : 0px 50px 50px 25px;
+        padding : 0px 25px 50px 25px;
+    }
+}
+/**
+   Small screen devices like iphone 5 and SE
+   */
+@media screen and (min-width:300px) and (max-width:374px){
+    .searchBox{
+        width: 50%;
+        margin-top: 3px;
+        height: 50px;
+        margin-left: 4%;
+    }
+    .home-icon {
+        margin-left: 75%;
+        font-size: 27px;
+    }
+    .header {
+        padding : 0px 25px 50px 25px;
     }
 }

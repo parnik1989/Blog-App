@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RouterModule, Routes, Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import {DataListDTO, ResponseDTO, StoryDTO, StoryResponseDTO, StroyPageInput} from '../support/application.dtos';
 @Component({
@@ -13,7 +14,8 @@ export class BooksComponent implements OnInit {
   public storyPage: boolean;
   public storyPageInput: StroyPageInput;
 
-  constructor(private _httpService: HttpClient) {
+  constructor(private _httpService: HttpClient,
+    private _router: Router) {
   }
 
   ngOnInit() {
@@ -32,6 +34,10 @@ export class BooksComponent implements OnInit {
   }
 
   public populateStoryDetails(storyName: string, storyTitle: string): void {
+    if (storyName === 'book_sub') {
+      this._router.navigateByUrl('/book_sub');
+      console.log(storyName);
+    } else {
     this._httpService.get<StoryResponseDTO>('./assets/BlogContents/' + storyName + '.json').subscribe(
       successResponse => {
         this.storyPageInput.storyDTO = successResponse['storyDetails'];
@@ -44,5 +50,6 @@ export class BooksComponent implements OnInit {
         console.log (err.message);
       }
     );
+  }
   }
 }

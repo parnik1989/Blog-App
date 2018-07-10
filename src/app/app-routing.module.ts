@@ -12,7 +12,7 @@ import { BooksComponent } from './books/books.component';
 import { RecentComponent } from './recent/recent.component';
 import { PopularComponent } from './popular/popular.component';
 import { AuthorComponent } from './author/author.component';
-
+import { BookSubscriptionComponent } from './book-subscription/book-subscription.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'recent' , component: RecentComponent},
   { path: 'popular' , component: PopularComponent},
   { path: 'authors' , component: AuthorComponent},
+  { path: 'book_sub' , component: BookSubscriptionComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
