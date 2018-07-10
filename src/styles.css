@@ -1,16 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-
 .main-body {
-  background-image: url("/assets/images/body_bg.jpg");
+  background-image: url(/assets/images/body_bg.jpg);
   background-size: cover;
-  width: 100%;
+  width: 75%;
   height: 100%;
+  margin-left: 10%;
   position: relative;
 }
 .page-content {
   width: 100%;
   height: auto;
   position: relative;
+  border-left: solid;
+  border-right: solid;
+  border-color: #3a767c;
 }
 .topic-heading {
   width: 100%;
@@ -18,17 +21,17 @@
   height: 50px;
   padding: 10px 15px;
 }
+.hometopic-heading {
+  width: 100%;
+  background-color: #3a777c;
+  height: 75px;
+  padding: 10px 15px;
+}
 .topic-name {
   font-size: 20px;
   color: white;
 }
-.view-all {
-  max-width: 50%;
-  margin-top: 5px;
-  margin-left: 750px;
-  color: white;
-  position: absolute;
-}
+
 .image-row {
   width: 100%;
   padding: 2% 3%;
@@ -60,11 +63,24 @@
   max-height: 62%;
   padding-left: 4%;
   }
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: black
+}
+a:hover { 
+  color: white;
+}
 /* For mobile portrait mode*/
-@media screen and (min-width:300px) and (max-width:599px){
-  .view-all {
-    margin-top: 5px;
-    margin-left: 90px;
+@media screen and (min-width:300px) and (max-width:374px){
+  .main-body {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .hometopic-heading {
+    height: 75px;
+    padding: 10px 15px;
   }
   .image-row {
     padding: 2% 5%;
@@ -78,11 +94,33 @@
     cursor: pointer;
   }
   }
+/* For mobile portrait mode*/
+@media screen and (min-width:375px) and (max-width:599px){
+  .hometopic-heading {
+    height: 75px;
+    padding: 10px 15px;
+  }
+  .image-row {
+    padding: 2% 5%;
+    margin-left: 0px;
+  }
+  .imageList{
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    max-height: 330px;
+    cursor: pointer;
+  }
+  .main-body {
+    width: 100%;
+    margin-left: 0%;
+  }
+  }
 /* For mobile Landscape mode*/
 @media screen and (min-width:600px) and (max-width:850px){
-  .view-all {
-    margin-top: 5px;
-    margin-left: 400px;
+  .hometopic-heading {
+    height: 75px;
+    padding: 10px 15px;
   }
   .image-row {
     padding: 2% 5%;
@@ -94,5 +132,11 @@
     max-height: 330px;
     cursor: pointer;
   }
+  .main-body {
+    width: 100%;
+    margin-left: 0%;
+  }
 }
+
+
 

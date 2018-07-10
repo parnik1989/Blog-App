@@ -1,6 +1,7 @@
     <div class="page-content" *ngIf="!storyPage">
-        <div class="topic-heading">
-            <a href="/popular"><span class="topic-name">Trending Now</span></a>
+        <div class="hometopic-heading">
+            <div><span class="topic-name">Trending Now</span></div>
+            <div><p>( Showing 4 of {{trendingList.length}} <a href= "/popular">Click to View All</a> )</p></div>
         </div>    
         <div class="row image-row">
             <div class="col-sm-3 content-row" *ngFor="let item of trendingList| slice:0:4; let i=index">
@@ -8,8 +9,9 @@
                 <div class="bottomtext">{{item.title}}</div></a>
             </div>
         </div>
-        <div class="topic-heading">
-            <a href="/recent"><span class="topic-name">Recently Added</span></a>
+        <div class="hometopic-heading">
+            <div><span class="topic-name">Recently Added</span></div>
+            <div><p >( Showing 4 of {{recentList.length}} <a href= "/recent">Click to View All</a> )</p></div>
         </div>    
         <div class="row image-row">
             <div class="col-sm-3 content-row" *ngFor="let item of recentList| slice:0:4; let i=index">
@@ -17,9 +19,10 @@
                 <div class="bottomtext">{{item.title}}</div></a>
             </div>
         </div>
-        <div class="topic-heading">
-            <a href="/authors"><span class="topic-name">Author's Favorite</span></a>
-        </div>    
+        <div class="hometopic-heading">
+            <div><span class="topic-name">Author's Favorite</span></div>
+            <div><p >( Showing 4 of {{authorsList.length}} <a href= "/authors">Click to View All</a> )</p></div>
+        </div>
         <div class="row image-row">
             <div class="col-sm-3 content-row" *ngFor="let item of authorsList| slice:0:4; let i=index">
                 <a (click)="populateStoryDetails(item.name,item.title)"><img src="assets/BlogImages/authors/{{item.image}}.JPG" alt="image" class="imageList">
