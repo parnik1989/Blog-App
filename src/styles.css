@@ -47,6 +47,8 @@
   max-height: 23px;
   padding : 2px 2px 30px 2px;
   cursor: pointer;
+  border-bottom-left-radius: 25px 25px;
+  border-bottom-right-radius: 25px 25px;
 }
 .content-row {
   padding: 10px;
@@ -57,6 +59,8 @@
   padding: 0%;
   max-height: 330px;
   cursor: pointer;
+  border-top-left-radius: 25px 25px;
+  border-top-right-radius: 25px 25px;
 }
 .form-control {
   margin-top: 2%;
