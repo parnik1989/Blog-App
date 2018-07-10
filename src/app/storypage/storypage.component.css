@@ -1,26 +1,31 @@
 .story-text {
-    padding: 3% 20%;
+    padding: 3% 5%;
     text-align: justify;
     font-family: cursive;
 }
 .story-background {
-    width: 101%;
+    width: 100%;
     position: relative;
+    margin-left: 0%;
     background-color: rgb(181, 206, 207);
 }
 .story-image{
-    margin-left: 35%;
+    margin-left: 20%;
     margin-bottom: 30px;
     padding: 20px;
-    height: 375px;
-    width:600px;
+    height: 250px;
+    width:450px;
     border-bottom-left-radius: 50px 50px;
     border-top-right-radius: 50px 50px;
+    
 }
 .story-title {
-    background-color: lightsteelblue;
-    padding: 3% 20%;
-    font-size: 15px;
+    background-color: #3a777c;
+    padding: 2% 5%;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Comic Sans MS;
 }
 
 @media screen and (min-width:300px) and (max-width:374px){
@@ -28,19 +33,11 @@
     padding: 3% 10%;
     text-align: justify;
     }
-    .story-background {
-    width: 104%;
-    background-color: rgb(181, 206, 207);
-    }
     .story-image{
         height: 170px;
         width: 300px;
         margin-bottom: 0px;
         margin-left: 5%;
-    }
-    .story-title {
-        background-color: lightsteelblue;
-        padding: 3% 10%;
     }
 
 }
@@ -50,41 +47,27 @@
     padding: 3% 10%;
     text-align: justify;
     }
-    .story-background {
-    width: 104%;
-    background-color: rgb(181, 206, 207);
-    }
     .story-image{
         height: 190px;
         width: 325px;
         margin-bottom: 0px;
         margin-left: 10%;
     }
-    .story-title {
-        background-color: lightsteelblue;
-        padding: 3% 10%;
-    }
+
 
 }
 
 @media screen and (min-width:600px) and (max-width:850px){
     .story-text {
-        padding: 3% 20%;
+        padding: 3% 5%;
         text-align: justify;
     }
-    .story-background {
-        width: 103%;
-        background-color: rgb(181, 206, 207);
-    }
     .story-image{
-        height: 235px;
-        width: 400px;
+        height: 250px;
+        width:450px;
         padding-left: 0%;
-        margin-left: 30%;
+        margin-left: 40%;
     }
-    .story-title {
-        background-color: lightsteelblue;
-        padding: 1% 25%;
-    }
+    
 
 }

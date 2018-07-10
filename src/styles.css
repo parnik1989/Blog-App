@@ -2,9 +2,9 @@
 .main-body {
   background-image: url(/assets/images/body_bg.jpg);
   background-size: cover;
-  width: 75%;
+  width: 65%;
   height: 100%;
-  margin-left: 10%;
+  margin-left: 15%;
   position: relative;
 }
 .page-content {
@@ -49,6 +49,7 @@
   cursor: pointer;
   border-bottom-left-radius: 25px 25px;
   border-bottom-right-radius: 25px 25px;
+  box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 grey;
 }
 .content-row {
   padding: 10px;
@@ -75,6 +76,9 @@ a {
 }
 a:hover { 
   color: white;
+}
+.effect {
+  box-shadow: 0 4px 8px 0, 0 6px 20px 0
 }
 /* For mobile portrait mode*/
 @media screen and (min-width:300px) and (max-width:374px){
