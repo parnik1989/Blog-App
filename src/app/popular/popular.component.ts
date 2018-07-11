@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 import {DataListDTO, ResponseDTO, StoryDTO, StoryResponseDTO, StroyPageInput} from '../support/application.dtos';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-popular',
   templateUrl: './popular.component.html',
@@ -14,7 +14,8 @@ export class PopularComponent implements OnInit {
   public storyPageInput: StroyPageInput;
   public storyPage: boolean;
 
-  constructor(private _httpService: HttpClient) {
+  constructor(private _httpService: HttpClient,
+    private _router: Router) {
   }
 
   ngOnInit() {
@@ -33,6 +34,9 @@ export class PopularComponent implements OnInit {
   }
 
   public populateStoryDetails(storyName: string, storyTitle: string): void {
+    if (storyName === 'book_sub') {
+      this._router.navigateByUrl('/book_sub');
+    } else {
     this._httpService.get<StoryResponseDTO>('./assets/BlogContents/' + storyName + '.json').subscribe(
       successResponse => {
         this.storyPageInput.storyDTO = successResponse['storyDetails'];
@@ -45,5 +49,6 @@ export class PopularComponent implements OnInit {
         console.log (err.message);
       }
     );
+  }
   }
 }

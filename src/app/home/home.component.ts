@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
-import {DataListDTO, ResponseDTO, StoryResponseDTO, StoryDTO, StroyPageInput} from '../support/application.dtos';
-import {RestServices} from '../service/rest.services';
+import {DataListDTO, ResponseDTO, StoryResponseDTO, StroyPageInput} from '../support/application.dtos';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,7 +16,7 @@ export class HomeComponent implements OnInit {
   public storyPage: boolean;
   public storyPageInput: StroyPageInput;
   constructor(private _httpService: HttpClient,
-    private _restServices: RestServices) {
+    private _router: Router) {
   }
 
   ngOnInit() {
@@ -60,6 +59,9 @@ export class HomeComponent implements OnInit {
   }
 
   public populateStoryDetails(storyName: string, storyTitle: string): void {
+    if (storyName === 'book_sub') {
+      this._router.navigateByUrl('/book_sub');
+    } else {
     this._httpService.get<StoryResponseDTO>('./assets/BlogContents/' + storyName + '.json').subscribe(
       successResponse => {
         this.storyPageInput.storyDTO = successResponse['storyDetails'];
@@ -72,6 +74,7 @@ export class HomeComponent implements OnInit {
         console.log (err.message);
       }
     );
+  }
   }
 
 }
