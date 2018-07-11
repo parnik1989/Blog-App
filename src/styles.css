@@ -29,7 +29,8 @@
 }
 .topic-name {
   font-size: 20px;
-  color: white;
+  color: #ffd700;
+  font-family: cursive;
 }
 
 .image-row {
@@ -41,10 +42,8 @@
   background-color: aliceblue;
   text-align: center;
   width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-height: 23px;
+  word-wrap: break-word;
+  max-height: 50px;
   padding : 2px 2px 30px 2px;
   cursor: pointer;
   border-bottom-left-radius: 25px 25px;
@@ -52,7 +51,7 @@
   box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 grey;
 }
 .content-row {
-  padding: 10px;
+  padding: 5px;
  }
 .imageList{
   width: 100%;
