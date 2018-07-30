@@ -1,6 +1,11 @@
 <div class ="header">
   <span><i class="material-icons menu-img" *ngIf="!open" (click)="openSideNav()">menu</i></span>
   <span><i class="material-icons menu-img" *ngIf="open" (click)="openSideNav()">close</i></span>
-  <span class="searchBox"><input class="form-control" id="myInput" type="text" placeholder="Search.."></span>
+  <span class="searchBox"><input class="form-control" id="myInput" type="text" placeholder="Search.." 
+    (keyup)="search($event)" [(ngModel)]="searchInput">
+  <div *ngFor="let blog of updatedBlogList" (click)='onSelect($event)'>
+    <option class="searchContent"[value]="blog.name">{{blog.title}}</option>
+  </div>
+  </span>
   <span ><a href="/home"><i class="material-icons home-icon">home</i></a></span>
 </div>

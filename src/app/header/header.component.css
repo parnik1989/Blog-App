@@ -15,6 +15,12 @@
     height: 46px;
     margin-left: 4%;
 }
+.searchContent {
+    padding: 5px 40px;
+    background-color: white;
+    border-bottom: 1px solid #ced4da;
+    cursor: pointer;
+}
 .menu-img {
     padding-top: 1%;
     font-size: 40px;
@@ -51,6 +57,11 @@
     .header {
         padding : 0px 25px 50px 25px;
     }
+    .searchContent {
+        padding: 5px 3px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 /**
    Small screen devices like iphone 5 and SE
@@ -61,6 +72,11 @@
         margin-top: 3px;
         height: 50px;
         margin-left: 4%;
+    }
+    .searchContent {
+        padding: 5px 3px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .home-icon {
         margin-left: 75%;

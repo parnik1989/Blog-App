@@ -63,17 +63,16 @@
     }
   .profile-image {
     margin: 0px;
-    margin-left: 80px;
-    padding-top: 0px;
+    padding: 0% 24%;
     position: absolute;
     }
   .profile-text {
     position: absolute;
-    padding: 5px;
-    margin: 150px 20px 0px 0px;
+    padding: 12px;
+    margin: 150px 0px 0px 0px;
     }
   .profile-title {
-      margin-left: 70px;
+    padding: 0% 23%;
     }
   }
   @media screen and (min-width:300px) and (max-width:374px){

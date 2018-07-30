@@ -1,14 +1,11 @@
-<div class="page-content" *ngIf="!storyPage">
+<div class="page-content">
     <div class="topic-heading">
-        <span class="topic-name">Travel Stories</span>
+        <span class="topic-name">Travel Diary</span>
     </div>    
     <div class="row image-row">
         <div class="col-sm-3 content-row" *ngFor="let item of mainDataList">
-            <a (click)="populateStoryDetails(item.name,item.title)"><img src="assets/BlogImages/travel/{{item.image}}.JPG" alt="image" class="imageList">
+            <a href="/{{item.name}}"><img src="assets/BlogImages/{{item.image}}.JPG" alt="image" class="imageList">
             <div class="bottomtext">{{item.title}}</div></a>
         </div>
     </div>
-</div>
-<div *ngIf="storyPage">
-    <app-storypage [storyPageInput] = "storyPageInput"></app-storypage>
 </div>

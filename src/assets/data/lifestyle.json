@@ -15,8 +15,14 @@
         "image": "rech_bach"
       },
       {
-        "title": "The abstract Objects",
-        "image": "pattern"
+        "title": "School Admission",
+        "name": "anecdoteSchool",
+        "image": "anecdoteSchool"
+      },
+      {
+        "title": "Life in College",
+        "name": "anecdoteCollege",
+        "image": "anecdote_college"
       }
       ]
 }

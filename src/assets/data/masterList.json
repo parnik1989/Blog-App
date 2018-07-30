@@ -1,0 +1,44 @@
+{
+    "dataList":[{
+      "title": "Quotes By Novoneel Chakraborty",
+      "name": "kiss_in_rain",
+      "image": "kiss_in_rain"
+    },
+    {
+      "title": "Quotes By Paulo Cohelo",
+      "name": "pc",
+      "image": "pc"
+    },
+    {
+      "title": "Quotes By Richard Bach",
+      "name": "rech_bach",
+      "image": "rech_bach"
+    },
+    {
+        "title": "5 Reasons to go for Book Subscriptions",
+        "name": "book_sub",
+        "image": "book_sub"
+      },
+      {
+        "title": "5 Book-Sets to Collect",
+        "name": "booksToBuy",
+        "image": "booksToBuy"
+      },
+      {
+        "title": "Young Adult Novels",
+        "name": "young_adult",
+        "image": "young_adult"
+      },
+      {
+        "title": "School Admission",
+        "name": "anecdoteSchool",
+        "image": "anecdoteSchool"
+      },
+      {
+        "title": "Life in College",
+        "name": "anecdoteCollege",
+        "image": "anecdote_college"
+      }
+      
+    ]
+}

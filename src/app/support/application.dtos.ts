@@ -1,5 +1,6 @@
 export class DataListDTO {
     title: string;
+    name: string;
     image: string;
 }
 

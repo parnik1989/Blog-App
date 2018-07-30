@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
-import {DataListDTO, ResponseDTO, StoryResponseDTO, StroyPageInput} from '../support/application.dtos';
+import {DataListDTO, ResponseDTO} from '../support/application.dtos';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,17 +14,14 @@ export class HomeComponent implements OnInit {
   public recentList: DataListDTO[] = [];
   public authorsList: DataListDTO[] = [];
   public storyPage: boolean;
-  public storyPageInput: StroyPageInput;
   constructor(private _httpService: HttpClient,
     private _router: Router) {
   }
 
   ngOnInit() {
-    this.storyPage = false;
     this.getMostPopularBlogs();
     this.getRecentBlogs();
     this.getAuthorsList();
-    this.storyPageInput = new StroyPageInput();
   }
   public getMostPopularBlogs (): void {
 
@@ -57,24 +54,4 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-
-  public populateStoryDetails(storyName: string, storyTitle: string): void {
-    if (storyName === 'book_sub') {
-      this._router.navigateByUrl('/book_sub');
-    } else {
-    this._httpService.get<StoryResponseDTO>('./assets/BlogContents/' + storyName + '.json').subscribe(
-      successResponse => {
-        this.storyPageInput.storyDTO = successResponse['storyDetails'];
-        this.storyPageInput.storyName = storyName;
-        this.storyPageInput.storyTitle = storyTitle;
-        this.storyPageInput.storyDesc = successResponse['storyDesc'];
-        this.storyPage = true;
-      },
-      (err: HttpErrorResponse) => {
-        console.log (err.message);
-      }
-    );
-  }
-  }
-
 }
